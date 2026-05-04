@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lomitería Demo</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#fff8f0;
+    color:#333;
+}
+
+/* NAV */
+
+nav{
+    background:#c62828;
+    color:white;
+    position:fixed;
+    width:100%;
+    z-index:1000;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.logo{
+    font-weight:700;
+    font-size:20px;
+}
+
+.nav-links a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('fondo.jpg');
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:50px;
+}
+
+.hero p{
+    margin:15px 0;
+}
+
+.btn{
+    background:#ffca28;
+    color:black;
+    padding:15px 30px;
+    border-radius:8px;
+    font-weight:600;
+    display:inline-block;
+}
+
+/* SECCIONES */
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+/* PRODUCTOS */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.product{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.product:hover{
+    transform:translateY(-5px);
+}
+
+.product img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.product-content{
+    padding:15px;
+}
+
+.product h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#c62828;
+    font-weight:700;
+    margin-top:10px;
+}
+
+/* GALERIA */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* MAPA */
+
+iframe{
+    width:100%;
+    height:250px;
+    border:0;
+    border-radius:10px;
+}
+
+/* CTA FINAL */
+
+.cta{
+    text-align:center;
+    background:#c62828;
+    color:white;
+    border-radius:15px;
+    padding:40px 20px;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <div class="logo">NOMBRE LOMITERÍA</div>
+        <div class="nav-links">
+            <a href="#menu">Menú</a>
+            <a href="#galeria">Fotos</a>
+            <a href="#ubicacion">Ubicación</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <div>
+        <h1>Lomitos y Hamburguesas 🔥</h1>
+        <p>Pedidos rápidos directo por WhatsApp</p>
+        <a class="btn" href="https://wa.me/595XXXXXXXXX">Pedir ahora</a>
+    </div>
+</section>
+
+<section id="menu">
+    <div class="container">
+        <div class="section-title">
+            <h2>Nuestro Menú</h2>
+        </div>
+
+        <div class="products">
+
+            <div class="product">
+                <img src="lomo1.jpg">
+                <div class="product-content">
+                    <h3>Lomito Clásico</h3>
+                    <p>Carne, lechuga, tomate, huevo</p>
+                    <div class="price">25.000 Gs</div>
+                    <a class="btn"
+                    href="https://wa.me/595981682279?text=Hola,%20quiero%20el%20Lomito%20Clásico%20por%2025.000%20Gs">
+                        Pedir ahora
+                    </a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="lomo2.jpg">
+                <div class="product-content">
+                    <h3>Lomito Completo</h3>
+                    <p>Con todo + papas</p>
+                    <div class="price">35.000 Gs</div>
+                    <a class="btn"
+                    href="https://wa.me/595981682279?text=Hola,%20quiero%20el%20Lomito%20Completo%20por%2035.000%20Gs">
+                        Pedir ahora
+                    </a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="burger.jpg">
+                <div class="product-content">
+                    <h3>Hamburguesa Doble</h3>
+                    <p>Carne doble + cheddar</p>
+                    <div class="price">30.000 Gs</div>
+                    <a class="btn"
+                    href="https://wa.me/595981682279?text=Hola,%20quiero%20la%20Hamburguesa%20Doble%20por%2030.000%20Gs">
+                        Pedir ahora
+                    </a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="papas.jpg">
+                <div class="product-content">
+                    <h3>Papas Fritas</h3>
+                    <p>Crocantes</p>
+                    <div class="price">15.000 Gs</div>
+                    <a class="btn"
+                    href="https://wa.me/595981682279?text=Hola,%20quiero%20las%20Papas%20Fritas%20por%2015.000%20Gs">
+                        Pedir ahora
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="galeria">
+    <div class="container">
+        <div class="section-title">
+            <h2>Fotos reales</h2>
+        </div>
+
+        <div class="gallery">
+            <img src="foto1.jpg">
+            <img src="foto2.jpg">
+            <img src="foto3.jpg">
+        </div>
+    </div>
+</section>
+
+<section id="ubicacion">
+    <div class="container">
+        <div class="section-title">
+            <h2>Ubicación</h2>
+        </div>
+
+        <iframe src="LINK_GOOGLE_MAPS"></iframe>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="cta">
+            <h2>Pedí ahora</h2>
+            <p>Respuesta rápida por WhatsApp</p>
+            <a class="btn" href="https://wa.me/595XXXXXXXXX">Hacer pedido</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Lomitería
+</footer>
+
+</body>
+</html>
